@@ -4,12 +4,12 @@ CFLAGS =	-Wall -Wextra -Werror
 
 RM =		rm -f
 
-LIB =	ar rc
+LIB =		ar rc
 
 NAME =		libftprintf.a
 HEADER =	libftprintf.h
 
-SRCS = 
+SRCS = ft_printf.c \
 
 OBJS = 	$(SRCS:.c=.o)
 
@@ -25,7 +25,7 @@ clean:
 			$(RM) $(OBJS)
 
 fclean:		clean
-			$(RM) $(OBJS)
+			$(RM) $(NAME)
 
 re:			fclean all
 
