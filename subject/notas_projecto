@@ -9,3 +9,10 @@ funciones autorizadas:
 	- va_start, va_arg, va_copy, va_end
 Escribe una librería que contenga la función ft_printf(), 
 que imite el printf() original
+
+## Variables variadicas:
+
+-	Define un nombre con va_list.
+-	Inicializa el acceso a los parámetros anónimos con va_start.
+-	Obtén un nuevo parámetro con cada llamada a va_arg.
+-	Recoge la basura con va_end.
