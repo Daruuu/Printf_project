@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chars.c                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 19:38:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/18 19:10:24 by dasalaza         ###   ########.fr       */
+/*   Created: 2023/09/18 19:34:28 by dasalaza          #+#    #+#             */
+/*   Updated: 2023/09/18 20:43:42 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	*ft_putchar(int c, int *len)
+int		*ft_putcharr(int c, int *len)
 {
 	write(1, &c, 1);
 	(*len)++;
-	return (*len);
+	return (len);
 }
 
-void	ft_putstr(char *str)
+int	main ()
 {
-	int	i;
+	int	*len;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
+	int length = 0;
 
-int	main()
-{
-	char	*str;
+    int *p_length = ft_putchar('a', &length);
 
-	str= "hello world";
-	ft_putstr(str);
+    printf("Longitud: %d\n", *p_length); // Debería imprimir "Longitud: 1"
 
-	return (0);
+    p_length = ft_putchar('b', p_length); // Pasamos el puntero p_length para actualizarlo.
+
+    printf("Longitud: %d\n", *p_length); // Debería imprimir "Longitud: 2"
+	int	c = 65;
+    return (0);
 }
