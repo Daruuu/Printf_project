@@ -6,13 +6,13 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:34:28 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/18 20:43:42 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:12:31 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int		*ft_putcharr(int c, int *len)
+int		*ft_putchar(int c, int *len)
 {
 	write(1, &c, 1);
 	(*len)++;

@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/18 19:39:17 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:11:18 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  *
 */
 
-int	check_type_input(char format)
+int	check_type_input(char format, va_arg())
 {
 	int	option;
 
