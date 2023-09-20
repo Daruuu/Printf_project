@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/19 18:21:37 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:49:59 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdlib.h>	/* malloc, free*/
 # include <unistd.h>	/* write*/
 # include <stdio.h>		/* test printf*/
+# include <stdarg.h>	/* argumentos variadicos*/
+
 
 int		ft_printf(char const *, ...);
 int     *ft_putchar(int c, int *len);

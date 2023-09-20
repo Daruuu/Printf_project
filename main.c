@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 21:51:55 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/19 21:59:20 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:36:45 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,31 @@
 
 void    foo(char *fmt, ...)
 {
-    va_list ap;
+    va_list args;
     int d;
     char c, *s;
 
-   va_start(ap, fmt);
+    va_start(args, fmt);
     while (*fmt)
         switch (*fmt++) {
-        case 's':              /* string */
-            s = va_arg(ap, char *);
+        case 's':/* string */
+            s = va_arg(args, char *);
             printf("string %s\n", s);
             break;
         case 'd':              /* int */
-            d = va_arg(ap, int);
+            d = va_arg(args, int);
             printf("int %d\n", d);
             break;
         case 'c':              /* char */
             /* need a cast here since va_arg only
                takes fully promoted types */
-            c = (char) va_arg(ap, int);
+            c = (char) va_arg(args, int);
             write(1, &c, sizeof(char));
             break;
         }
-    va_end(ap);
+    va_end(args);
 }
+
 int main()
 {
     foo("%s\n %c", "abcde", 'a');

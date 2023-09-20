@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:34:28 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/19 18:12:31 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:46:04 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		*ft_putchar(int c, int *len)
 	(*len)++;
 	return (len);
 }
-
+/*
 int	main ()
 {
 	int	*len;
@@ -34,4 +34,4 @@ int	main ()
     printf("Longitud: %d\n", *p_length); // Debería imprimir "Longitud: 2"
 	int	c = 65;
     return (0);
-}
+}*/

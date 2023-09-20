@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:20:36 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/19 18:21:28 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:46:46 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int ft_putstr(char *str)
 
     i = 0;
     while (str[i] != '\0')
-        ft_putchar(i, str);
+        ft_putchar(i, &str);
     i++;
     return (i);
 }
