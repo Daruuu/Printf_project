@@ -15,13 +15,12 @@
 //
 #include "libftprintf.h"
 
-int ft_putstr(char *str)
+int ft_putstr(va_list args)
 {
-    int i;
+    char    *str;
+    size_t  len;
 
-    i = 0;
-    while (str[i] != '\0')
-        ft_putchar(i, &str);
-    i++;
-    return (i);
+    str = va_arg(args, char *);
+    len = ft_strlen(str);
+    return ((int) write(1, str, len));
 }

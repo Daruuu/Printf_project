@@ -22,7 +22,8 @@
 
 
 int		ft_printf(char const *, ...);
-int     *ft_putchar(int c, int *len);
+int     ft_putchar(va_list args);
+size_t  ft_strlen(char *s);
 void	ft_print_number(int	number);
 int		ft_putstr(char	*str);
 

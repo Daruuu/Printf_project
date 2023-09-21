@@ -10,48 +10,61 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
+# include "libftprintf.h"
 /*
  * funcion variadica
- *
 */
 
-int	check_type_input(char format, va_ar)
+int	check_type_input(char format, ...)
 {
-	int	option;
+	int	retorno_write;
+	int	total_bytes_read;
 
+	total_bytes_read = 0;
 	if (format == 'c')
-		option = ft_putchar();
+		retorno_write = ft_putchar(args);
 	else if (format == 's')
-		option = ;
-	else if (format == 'p')
-		option = ;
+		retorno_write = ;
+	/*else if (format == 'p')
+		retorno_write = ;
 	else if (format == 'd')
-		option = ;
+		retorno_write = ;
 	else if (format == 'i')
-		option = ;
+		retorno_write = ;
 	else if (format == 'u')
-		option = ;
+		retorno_write = ;
 	else if (format == 'x')
-		option = ;
+		retorno_write = ;
 	else if (format == 'X')
-		option = ;
+		retorno_write = ;
 	else if (format == '%')
-		option = ;
+		retorno_write = ;
+		*/
 }
 
 int		ft_printf(char const *fmt, ...)
 {
 	va_list	args;
-	int		format;
-	
+	int		retorno_check_input;
+
 	va_start(args, fmt);
-	check_type_input(args, );
+	retorno_check_input = 0;
 
-
-	
+	while (*fmt)
+	{
+		if (fmt == '%')
+		{
+			++fmt;
+			retorno_check_input = check_type_input(*fmt, args); 
+			if ( retorno_check_input == -1)
+				break;
+			++fmt;
+		}
+		else
+		{
+			write(1, fmt, 1);
+			++fmt;
+		}
+	}
 	va_end(args);
-
-
 }
