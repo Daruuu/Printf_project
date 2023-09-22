@@ -6,10 +6,9 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/20 19:49:59 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/22 21:18:18 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef	LIBFTPRINTF_H
 # define LIBFTPRINTF_H
@@ -24,8 +23,7 @@
 int		ft_printf(char const *, ...);
 int     ft_putchar(va_list args);
 size_t  ft_strlen(char *s);
-void	ft_print_number(int	number);
-int		ft_putstr(char	*str);
+int		ft_putstr(va_list args);
 
 
 #endif
