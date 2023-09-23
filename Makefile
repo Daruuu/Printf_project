@@ -10,6 +10,7 @@ NAME =		libftprintf.a
 HEADER =	libftprintf.h
 
 SRCS =		ft_printf.c ft_putchar.c ft_putstr.c ft_strlen.c \
+			ft_putnbr.c \
 
 OBJS =		$(SRCS:.c=.o)
 

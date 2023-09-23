@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:31:25 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/20 16:38:17 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/23 13:21:51 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int ft_putnbr(int nbr)
     }
     else if (nbr < 10)
     {
-        digit =  nbr + '0';
+        digit = nbr + '0';
         write(1, &digit, 1);
     }
     return(0);

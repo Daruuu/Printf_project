@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/22 23:06:11 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/23 13:08:25 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
  * funcion variadica
 */
 
-int	check_type_input(char format, va_list args)
+static int  check_type_input(char format, va_list args)
 {
 	int	retorno_write;
 //	int	total_bytes_read;
 
 //	total_bytes_read = 0;
+    retorno_write = 0;
 	if (format == 'c')
-		retorno_write = ft_putchar(args);
-	else if (format == 's')
-		retorno_write = ft_putstr(args);
+		retorno_write += ft_putchar(args);
+	else
+//        if (format == 's')
+		retorno_write += ft_putstr(args);
 	/*else if (format == 'p')
 		retorno_write = ;
 	else if (format == 'd')
@@ -56,9 +58,8 @@ int     ft_printf(char const *format, ...)
 		if (*format == '%')
 		{
 			format++;
-            chars_printed += check_type_input(*format, args);
-/*
-			if (chars_printed == -1)
+            chars_printed = check_type_input(*format, args);
+/*      if (chars_printed == -1)
 				break;
 */
 			format++;
@@ -79,11 +80,13 @@ int main()
     char c04;
 
     c04 = '~';
-    printf("test char:\n");
+//    printf("test char:\n");
 
     ft_printf("%c\n", 'a');
+/*
     ft_printf("%c\n", 'z');
     ft_printf("%c\n", '!');
     ft_printf("%c\n", c04);
+*/
     return (0);
 }
