@@ -6,14 +6,11 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:31:25 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/23 13:21:51 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/24 00:12:11 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//
-// Created by daruuu on 9/20/23.
-//
-#include "libftprintf.h"
+# include "libftprintf.h"
 
 int ft_putnbr(int nbr)
 {
@@ -23,7 +20,7 @@ int ft_putnbr(int nbr)
     {
         write(1, "-2147483648", 11);
     }
-    else if (nbr < 0)
+    if (nbr < 0)
     {
         write(1, "-", 1);
         nbr = nbr * -1;
@@ -39,5 +36,5 @@ int ft_putnbr(int nbr)
         digit = nbr + '0';
         write(1, &digit, 1);
     }
-    return(0);
+    return (0);
 }

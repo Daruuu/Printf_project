@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:20:36 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/23 19:52:30 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/24 00:26:37 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int ft_putstr(va_list args)
 
     str = va_arg(args, char *);
     len = (int) ft_strlen(str);
-
+    if (!str)
+        return (0);
     return ((int) write(1, str, len));
 }
