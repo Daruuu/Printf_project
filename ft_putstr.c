@@ -6,11 +6,11 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:20:36 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/24 11:28:04 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:00:20 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_putstr(va_list args)
 {

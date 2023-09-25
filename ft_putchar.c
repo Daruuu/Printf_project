@@ -6,16 +6,18 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:34:28 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/24 17:28:30 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:12:58 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int     ft_putchar(va_list args)
 {
     char c;
     c = (char) va_arg(args, int);
+    if (!c)
+        return (0);
 	return ((int)write(1, &c, 1));
 }
 /*

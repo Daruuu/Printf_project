@@ -6,11 +6,11 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:31:25 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 11:51:40 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:02:08 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libftprintf.h"
+# include "ft_printf.h"
 
 /*
 int ft_putnbr_k(int nbr)
@@ -34,7 +34,6 @@ int ft_putnbr_k(int nbr)
 	}
 }
 */
-
 static void	ft_putnbr(int nbr)
 {
     char	digit;

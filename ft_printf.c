@@ -6,11 +6,11 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 14:04:01 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:46:02 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 /*
  * funcion variadica
 */
@@ -18,7 +18,6 @@ static int	check_type_input(char format, va_list args)
 {
 	int	retorno_write;
 
-	unsigned int	n;
     retorno_write = 0;
 	if (format == 'c')
 		retorno_write = ft_putchar(args);
@@ -35,9 +34,9 @@ static int	check_type_input(char format, va_list args)
 		retorno_write = ;
 	else if (format == 'X')
 		retorno_write = ;
-	else if (format == '%')
-		retorno_write = ;
 		*/
+	else if (format == '%')
+		retorno_write = write(1, "%", 1);
     return (retorno_write);
 }
 
@@ -71,9 +70,8 @@ int		ft_printf(char const *format, ...)
     return (chars_printed);
 }
 
-int main()
+/*int main()
 {
-	/*
     printf("test char:\n");
     ft_printf("%c\n", ' ');
     ft_printf("%c\n", 'z');
@@ -106,16 +104,13 @@ int main()
 	ft_printf("%i\n", a02);
 	ft_printf("%i\n", a03);
 	ft_printf("%i\n", a04);
-	*/
     //unsigned int test01 = 0;
 //    unsigned int test01 = 100;
 	unsigned int test01 = 123456789;
-/*
     unsigned int test02 = -1;
     unsigned int test03 = 100;
     unsigned int test04 = 123456789;
     unsigned int test05 = 4294967295;
-*/
 	unsigned int		resutl;
     printf("test UNSIGNED INT:\n");
     ft_printf("mi	 funcion: %u\n", test01);
@@ -123,11 +118,10 @@ int main()
     resutl = ft_printf("%u\n", test01);
 	printf("%u\n", resutl);
 
-/*
     ft_printf("%u\n", test02);
 	ft_printf("%u\n", test03);
 	ft_printf("%u\n", test04);
 	ft_printf("%u\n", test05);
-*/
     return (0);
 }
+*/

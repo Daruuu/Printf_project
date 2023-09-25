@@ -6,11 +6,11 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 12:58:13 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 14:02:56 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 17:26:10 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int    ft_put_u_nbr(unsigned int nbr)
 {
