@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 12:58:13 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/24 15:16:58 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 03:59:29 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ static unsigned int    ft_put_u_nbr(unsigned int nbr)
     int digit;
 
     if (nbr > 9)
+    {
         ft_put_u_nbr(nbr / 10);
+        ft_put_u_nbr(nbr % 10);
+    }
     else
     {
         digit = nbr + '0';
@@ -33,4 +36,3 @@ unsigned int    ft_put_unsigned_nbr(va_list args)
     n = (unsigned int) va_arg(args, unsigned int);
     return (ft_put_u_nbr(n));
 }
-

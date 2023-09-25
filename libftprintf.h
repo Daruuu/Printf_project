@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/24 16:08:26 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/24 22:00:24 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int             ft_putchar(va_list args);
 size_t          ft_strlen(char *s);
 int             ft_putstr(va_list args);
 int             ft_putnbr_aux(va_list args);
-unsigned int    ft_put_unsigned_nbr(va_list args);
-
+unsigned int	ft_put_unsigned_nbr(va_list args);
 
 #endif

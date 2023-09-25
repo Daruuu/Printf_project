@@ -6,13 +6,14 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:31:25 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/24 16:28:12 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 01:44:15 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "libftprintf.h"
 
-int ft_putnbr_kenito(int nbr)
+/*
+int ft_putnbr_k(int nbr)
 {
 	int i;
 	char digits[10];
@@ -31,19 +32,22 @@ int ft_putnbr_kenito(int nbr)
 		nbr = nbr / 10;
 		--i;
 	}
-
 }
+*/
 
 void	ft_putnbr(int nbr)
 {
     char	digit;
 
     if (nbr == -2147483648)
-        write(1, "-2147483648", 11);
+    {
+         write(1, "-2147483648", 11);
+        return ;
+    }
     if (nbr < 0)
     {
         write(1, "-", 1);
-        nbr * -1;
+        nbr *= -1;
         ft_putnbr(nbr);
     }
     else if (nbr > 9)
@@ -72,8 +76,8 @@ static int ft_len_nbr(int nbr)
 	}
 	while (nbr > 0)
 	{
-		++len;
 		nbr = nbr / 10;
+		len++;
 	}
 	return (len);
 }
