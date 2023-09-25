@@ -6,27 +6,28 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 12:58:13 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 03:59:29 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 14:02:56 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static unsigned int    ft_put_u_nbr(unsigned int nbr)
+static int    ft_put_u_nbr(unsigned int nbr)
 {
-    int digit;
+    int	digit_count;
+	char	digit;
 
+	digit_count = 0;
+	digit = 0;
     if (nbr > 9)
     {
-        ft_put_u_nbr(nbr / 10);
-        ft_put_u_nbr(nbr % 10);
+        digit_count += ft_put_u_nbr(nbr / 10);
+//        ft_put_u_nbr(nbr % 10);
     }
-    else
-    {
-        digit = nbr + '0';
-        write(1, &digit, 1);
-    }
-    return (nbr);
+	digit = nbr % 10 + '0';
+	write(1, &digit, 1);
+	digit_count++;
+	return (digit_count);
 }
 
 unsigned int    ft_put_unsigned_nbr(va_list args)
@@ -34,5 +35,5 @@ unsigned int    ft_put_unsigned_nbr(va_list args)
     unsigned int    n;
 
     n = (unsigned int) va_arg(args, unsigned int);
-    return (ft_put_u_nbr(n));
+    return ((unsigned int)ft_put_u_nbr(n));
 }

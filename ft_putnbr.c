@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:31:25 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 01:44:15 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:51:40 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int ft_putnbr_k(int nbr)
 }
 */
 
-void	ft_putnbr(int nbr)
+static void	ft_putnbr(int nbr)
 {
     char	digit;
 
