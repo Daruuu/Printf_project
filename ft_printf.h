@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/26 16:01:03 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/26 23:50:44 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 # include <stdarg.h>	/* argumentos variadicos*/
 
 int		        ft_printf(char const *format, ...);
-int             ft_putchar(char c, size_t *counter);
+void			ft_putchar(int c, size_t counter_len);
 size_t          ft_strlen(char *s);
-int             ft_putstr(va_list args);
+void			ft_putstr(char *str, size_t *counter_len);
 int             ft_putnbr_aux(va_list args);
 unsigned int	ft_put_unsigned_nbr(va_list args);
 

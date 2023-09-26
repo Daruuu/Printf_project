@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_n.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 15:54:15 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/26 23:52:43 by dasalaza         ###   ########.fr       */
+/*   Created: 2023/09/26 23:53:52 by dasalaza          #+#    #+#             */
+/*   Updated: 2023/09/27 00:00:32 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
-void	ft_putchar(int c, size_t counter_len)
+void	ft_putnbr_n(int	nbr, size_t count_len)
 {
-	write(1, &c, 1);
-	(counter_len)++;
+	if (nbr == -2147483648)
+	{
+		ft_putnbr_n((nbr / 10), count_len);
+	}
+	else if (nbr < 0)
+	{
+		ft_putchar('-', count_len);
+		ft_putnbr_n((nbr / 10), count_len);
+	}
+	else
+	{
+
+	}
 }
 
-/*int	main()
-{
-	int	c = 97;
-	size_t	ptr_len = 0;
-	int		i;
-	char	*ptr;
-	ptr	= "hellowabcafdfda";
-	
-	i = 0;
 
-	while (ptr[i] != '\0')
-	{
-		ft_putchar(c, ptr_len);
-		i++;
-	}
-	return (0);
-}*/
