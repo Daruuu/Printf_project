@@ -5,35 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 19:34:28 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 19:12:58 by dasalaza         ###   ########.fr       */
+/*   Created: 2023/09/26 15:54:15 by dasalaza          #+#    #+#             */
+/*   Updated: 2023/09/26 16:47:23 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int     ft_putchar(va_list args)
+void	ft_putchar(int c, size_t *counter)
 {
-    char c;
-    c = (char) va_arg(args, int);
-    if (!c)
-        return (0);
-	return ((int)write(1, &c, 1));
+	write(1, &c, 1);
+	(*counter)++;
 }
-/*
-int	main ()
-{
-	int	*len;
-
-	int length = 0;
-
-    int *p_length = ft_putchar('a', &length);
-
-    printf("Longitud: %d\n", *p_length); // Debería imprimir "Longitud: 1"
-
-    p_length = ft_putchar('b', p_length); // Pasamos el puntero p_length para actualizarlo.
-
-    printf("Longitud: %d\n", *p_length); // Debería imprimir "Longitud: 2"
-	int	c = 65;
-    return (0);
-}*/
