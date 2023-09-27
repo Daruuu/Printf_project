@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/27 15:09:18 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/28 00:15:24 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,37 @@
 /*
  * funcion variadica
 */
-static int	check_type_input(char format, va_list args)
-{
-	int	retorno_write;
 
-    retorno_write = 0;
+static void	check_type_input(char format, va_list args, size_t *counter_len)
+{
+	char	*base_lowercase;
+	char	*base_uppercase;
+
+	base_lowercase = "123456789ABCDEF";
+	base_uppercase = "123456789abcdef";
 	if (format == 'c')
-		retorno_write = ft_putchar();
+		ft_putchar(va_arg(args, int), counter_len );
 	else if (format == 's')
-		retorno_write = ft_putstr();
+		ft_putstr(va_arg(args,char *), counter_len);
 /*	else if (format == 'p')
 		retorno_write = ;*/
 	else if (format == 'd' || format == 'i')
-		retorno_write = ft_putnbr_aux(args);
-		// retorno_write = ft_putnbr(100);
+		ft_putnbr_n(va_arg(args, int), counter_len);
 	else if (format == 'u')
-		retorno_write = ft_put_unsigned_nbr(args);
-	/*else if (format == 'x')
-		retorno_write = ;
-	else if (format == 'X')
-		retorno_write = ;
-		*/
+		ft_put_unsigned_nbr(va_arg(args, unsigned int), counter_len);
+	else if ((format == 'x') || (format == 'X'))
+		if (format == 'x')
+			ft_puthexa_nbr(va_arg(args, int), counter_len, base_lowercase);
+		else
+			ft_puthexa_nbr(va_arg(args, int), counter_len, base_uppercase);
 	else if (format == '%')
-		retorno_write = write(1, "%", 1);
-    return (retorno_write);
+		write(1, "%", 1);
 }
 
 int		ft_printf(char const *format, ...)
 {
 	va_list	args;
-	int		chars_printed;
+	size_t	chars_printed;
 
 	va_start (args, format);
     chars_printed = 0;
@@ -53,7 +54,7 @@ int		ft_printf(char const *format, ...)
 		if (*format == '%')
 		{
 			format++;
-            chars_printed = check_type_input(*format, args);
+            check_type_input(*format, args, &chars_printed);
 			if (chars_printed == -1)
 				return (-1);
 			format++;
