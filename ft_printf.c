@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 19:46:02 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:09:18 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static int	check_type_input(char format, va_list args)
 
     retorno_write = 0;
 	if (format == 'c')
-		retorno_write = ft_putchar(args);
+		retorno_write = ft_putchar();
 	else if (format == 's')
-		retorno_write = ft_putstr(args);
+		retorno_write = ft_putstr();
 /*	else if (format == 'p')
 		retorno_write = ;*/
 	else if (format == 'd' || format == 'i')

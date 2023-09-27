@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:54:21 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/25 19:01:25 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/27 13:30:25 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # include "ft_printf.h"
 
+/*
 size_t  ft_strlen(char *s)
 {
     size_t  len;
@@ -26,6 +27,12 @@ size_t  ft_strlen(char *s)
     while (*s++)
         ++len;
     return (len);
+}
+*/
+size_t  ft_strlen(const char *str)
+{
+    if (!str)
+        return
 }
 
 /*

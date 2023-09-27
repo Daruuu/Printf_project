@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen_n.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 15:54:15 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/27 16:35:15 by dasalaza         ###   ########.fr       */
+/*   Created: 2023/09/27 13:30:30 by dasalaza          #+#    #+#             */
+/*   Updated: 2023/09/27 15:19:39 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-void	ft_putchar(int c, size_t *counter_len)
+
+size_t	ft_strlen_n(char *str)
 {
-	write(1, &c, 1);
-	(counter_len)++;
-}
-/*int	main()
-{
-	int	c = 97;
-	size_t	ptr_len = 0;
-	int		i;
-	char	*ptr;
-	ptr	= "hellowabcafdfda";
-	
+	size_t	i;
+
+	if (!str)
+		return (0);
 	i = 0;
-
-	while (ptr[i] != '\0')
-	{
-		ft_putchar(c, ptr_len);
+	while (str[i] != '\0')
 		i++;
-	}
-	return (0);
-}*/
+	return (i);
+}
+/*
+int main()
+{
+	char    *str;
+	str = "he~llo world";
+	//str = " ";
+	printf("%i\n",(int)ft_strlen_n(str));
+}
+*/
