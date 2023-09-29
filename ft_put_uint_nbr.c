@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_unsigned_nbr.c                              :+:      :+:    :+:   */
+/*   ft_put_uint_nbr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 12:58:13 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/29 12:42:10 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:33:17 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ static int    ft_put_u_nbr(unsigned int nbr)
 	return (digit_count);
 }
 */
-void    ft_putuint_nbr(unsigned int nbr, size_t *counter_len)
+void    ft_put_uint_nbr(unsigned int nbr, size_t *counter_len)
 {
 	if (nbr >= 10)
 	{
-		ft_putuint_nbr(nbr / 10, counter_len);
-		if (*counter_len == -1)
+		ft_put_uint_nbr(nbr / 10, counter_len);
+		if ((int)counter_len == -1)
 			return ;
 	}
 	ft_putchar(nbr % 10 + '0', counter_len);

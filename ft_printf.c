@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/29 12:22:03 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:22:24 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,15 @@ static void	check_type_input(char format, va_list args, size_t *counter_len)
 	*/
 	else if (format == 'd' || format == 'i')
 		ft_putnbr_n(va_arg(args, int), counter_len);
+	else if (format == 'u')
+		ft_put_uint_nbr(va_arg(args, unsigned int), counter_len);
 	/*
-	  else if (format == 'u')
-		ft_put_unsigned_nbr(va_arg(args, unsigned int), counter_len);
-	 */
 	else if ((format == 'x') || (format == 'X'))
 		if (format == 'x')
 			ft_puthexa_nbr(va_arg(args, int), counter_len, base_lowercase);
 		else
 			ft_puthexa_nbr(va_arg(args, int), counter_len, base_uppercase);
+	 */
 	else if (format == '%')
 		write(1, "%", 1);
 }
@@ -72,7 +72,6 @@ int		ft_printf(char const *format, ...)
 	va_end(args);
     return ((int)chars_printed);
 }
-
 /*int main()
 {
     printf("test char:\n");
