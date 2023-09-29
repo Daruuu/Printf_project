@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:20:36 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/27 15:48:21 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 12:23:13 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,11 @@ int ft_putstr(va_list args)
     return ((int) write(1, str, len));
 }
 */
-void	ft_putstr(char *str, size_t counter_len)
+void	ft_putstr(char *str, size_t *counter_len)
 {
 	if (!str)
 		str = "(null)";
 	while (*str)
-	{
-		ft_putchar(*str, counter_len);
+		ft_putchar(*str, (size_t *) counter_len);
 			str++;
-			counter_len++;
-	}
 }

@@ -6,11 +6,11 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 23:53:52 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/27 16:26:52 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 12:10:02 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_n(int nbr, size_t *counter_len)
 {

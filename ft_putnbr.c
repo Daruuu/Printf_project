@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:31:25 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/26 23:53:45 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:14:43 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int ft_putnbr_k(int nbr)
 	}
 }
 */
+
+/*
 static void	ft_putnbr(int nbr)
 {
     char	digit;
@@ -89,3 +91,4 @@ int ft_putnbr_aux(va_list args)
 	ft_putnbr(i);
     return (ft_len_nbr(i));
 }
+*/
