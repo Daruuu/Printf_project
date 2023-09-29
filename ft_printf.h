@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/29 19:31:22 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:48:49 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 #include <stdarg.h>	/* argumentos variadicos*/
 
 int				ft_printf(char const *format, ...);
-void			ft_putchar(char c, size_t *counter_len);
-size_t          ft_strlen_n(char *str);
-void			ft_putstr(char *str, size_t *counter_len);
-void			ft_putnbr_n(int nbr, size_t *counter_len);
-void			ft_put_uint_nbr(unsigned int nbr, size_t *counter_len);
-void			ft_puthexa_nbr(int nbr, size_t *counter_len, char *base);
+void			ft_putchar(char c, int *counter_len);
+int				ft_strlen_n(char *str);
+void			ft_putstr(char *str, int *counter_len);
+void			ft_putnbr_n(int nbr, int *counter_len);
+void			ft_put_uint_nbr(unsigned int nbr, int *counter_len);
+void			ft_puthexa_nbr(int nbr, int *counter_len, char *base);
 
 #endif

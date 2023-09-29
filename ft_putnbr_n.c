@@ -6,13 +6,13 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 23:53:52 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/29 12:10:02 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:43:28 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_n(int nbr, size_t *counter_len)
+void	ft_putnbr_n(int nbr, int *counter_len)
 {
 	if (nbr == -2147483648)
 	{

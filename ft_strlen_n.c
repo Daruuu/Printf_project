@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 13:30:30 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/27 15:19:39 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 21:06:21 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 
-size_t	ft_strlen_n(char *str)
+int	ft_strlen_n(char *str)
 {
 	size_t	i;
 

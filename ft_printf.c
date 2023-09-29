@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/29 20:22:24 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:59:26 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
  * funcion variadica
 */
 
-static void	check_type_input(char format, va_list args, size_t *counter_len)
+static void	check_type_input(char format, va_list args, int *counter_len)
 {
+/*
 	char	*base_lowercase;
 	char	*base_uppercase;
 
 	base_lowercase = "123456789ABCDEF";
 	base_uppercase = "123456789abcdef";
+*/
 	if (format == 'c')
 		ft_putchar(va_arg(args, int), counter_len );
 	else if (format == 's')
-		ft_putstr(va_arg(args,char *), counter_len);
+		ft_putstr(va_arg(args,char *),counter_len);
 /*	else if (format == 'p')
 		retorno_write = ;
 	*/
@@ -47,7 +49,7 @@ static void	check_type_input(char format, va_list args, size_t *counter_len)
 int		ft_printf(char const *format, ...)
 {
 	va_list	args;
-	size_t	chars_printed;
+	int	chars_printed;
 
 	va_start (args, format);
     chars_printed = 0;
