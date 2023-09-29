@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/30 01:09:02 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/30 01:42:48 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,30 @@
 
 static void	check_type_input(char format, va_list args, int *counter_len)
 {
+/*
 	char	*base_lowercase;
 	char	*base_uppercase;
 
 	base_lowercase = "123456789ABCDEF";
 	base_uppercase = "123456789abcdef";
+*/
 	if (format == 'c')
 		ft_putchar_n(va_arg(args, int), counter_len);
-	if (format == 's')
+	else if (format == 's')
 		ft_putstr(va_arg(args,char *),counter_len);
-/*
 	else if (format == 'p')
 		ft_put_ptr(va_arg(args, unsigned long), counter_len);
-*/
 	else if (format == 'd' || format == 'i')
 		ft_putnbr_n(va_arg(args, int), counter_len);
 	else if (format == 'u')
 		ft_put_uint_nbr(va_arg(args, unsigned int), counter_len);
-	/*
 	else if ((format == 'x') || (format == 'X'))
 		if (format == 'x')
-			ft_puthexa_nbr(va_arg(args, unsigned long), counter_len, base_lowercase);
+//			ft_puthexa_nbr(va_arg(args, unsigned long), counter_len, base_lowercase);
+			ft_puthexa_nbr(va_arg(args, unsigned long), counter_len);
 		else
-			ft_puthexa_nbr(va_arg(args, int), counter_len, base_uppercase);
-	*/
+//			ft_puthexa_nbr(va_arg(args, int), counter_len, base_uppercase);
+			ft_puthexa_nbr(va_arg(args, int), counter_len);
 	else if (format == '%')
 		ft_putchar_n('%', counter_len);
 }
