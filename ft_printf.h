@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:39:00 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/30 01:37:31 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/09/30 02:20:21 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int				ft_strlen_n(char *str);
 void			ft_putstr(char *str, int *counter_len);
 void			ft_putnbr_n(int nbr, int *counter_len);
 void			ft_put_uint_nbr(unsigned int nbr, int *counter_len);
-void			ft_puthexa_nbr(unsigned long nbr, int *counter_len);
+void			ft_puthexa_nbr(unsigned int nbr, int *counter_len, char *base);
 void			ft_put_ptr(unsigned long nbr, int *counter_len);
 
 #endif
