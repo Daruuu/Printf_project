@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 15:54:15 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/30 00:43:58 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:32:08 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_putchar_n(char c, int *counter_len)
 	int	result;
 
 	result = 0;
-	if (*counter_len!= -1)
+	if (*counter_len != -1)
 		result = write(1, &c, 1);
 	if (result == -1)
 	{
@@ -26,7 +26,7 @@ int	ft_putchar_n(char c, int *counter_len)
 	}
 	else
 	{
-		*counter_len+= 1;
+		*counter_len += 1;
 		return (*counter_len);
 	}
 }

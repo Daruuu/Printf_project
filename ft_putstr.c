@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcelona.c>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:20:36 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/30 01:33:57 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:33:55 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putstr(char *str, int *counter_len)
 {
 	size_t	i;
 
-	//if (!str || str == NULL)
 	if (str == NULL)
 	{
 		ft_putstr("(null)", counter_len);

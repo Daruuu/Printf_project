@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/09/30 02:24:28 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:30:42 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 
 static void	check_type_input(char format, va_list args, int *counter_len)
 {
-	char	*base_lowercase;
-	char	*base_uppercase;
+	char	*base_low;
+	char	*base_upper;
 
-	base_lowercase = "123456789ABCDEF";
-	base_uppercase = "123456789abcdef";
+	base_low = "123456789ABCDEF";
+	base_upper = "123456789abcdef";
 	if (format == 'c')
 		ft_putchar_n(va_arg(args, int), counter_len);
 	else if (format == 's')
-		ft_putstr(va_arg(args,char *),counter_len);
+		ft_putstr(va_arg(args, char *), counter_len);
 	else if (format == 'p')
 		ft_put_ptr(va_arg(args, unsigned long), counter_len);
 	else if (format == 'd' || format == 'i')
@@ -33,17 +33,17 @@ static void	check_type_input(char format, va_list args, int *counter_len)
 	else if (format == 'u')
 		ft_put_uint_nbr(va_arg(args, unsigned int), counter_len);
 	else if ((format == 'x') || (format == 'X'))
+	{
 		if (format == 'x')
-			ft_puthexa_nbr(va_arg(args, unsigned long), counter_len, base_lowercase);
-			//ft_puthexa_nbr(va_arg(args, unsigned long), counter_len);
+			ft_puthexa_nbr(va_arg(args, unsigned long), counter_len, base_low);
 		else
-			ft_puthexa_nbr(va_arg(args, int), counter_len, base_uppercase);
-			//ft_puthexa_nbr(va_arg(args, int), counter_len);
+			ft_puthexa_nbr(va_arg(args, int), counter_len, base_upper);
+	}
 	else if (format == '%')
 		ft_putchar_n('%', counter_len);
 }
 
-int		ft_printf(char const *format, ...)
+int	ft_printf(char const *format, ...)
 {
 	va_list	args;
 	int		chars_printed;
@@ -51,13 +51,13 @@ int		ft_printf(char const *format, ...)
 
 	i = 0;
 	va_start (args, format);
-    chars_printed = 0;
+	chars_printed = 0;
 	while (format[i] && chars_printed != -1)
 	{
 		if (format[i] == '%')
 		{
 			i++;
-            check_type_input(format[i], args, &chars_printed);
+			check_type_input(format[i], args, &chars_printed);
 			i++;
 		}
 		else
@@ -67,7 +67,7 @@ int		ft_printf(char const *format, ...)
 		}
 	}
 	va_end(args);
-    return (chars_printed);
+	return (chars_printed);
 }
 /*
 int	main( )
