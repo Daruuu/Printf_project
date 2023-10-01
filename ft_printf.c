@@ -6,7 +6,7 @@
 /*   By: dasalaza <dasalaza@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 18:19:20 by dasalaza          #+#    #+#             */
-/*   Updated: 2023/10/01 17:30:42 by dasalaza         ###   ########.fr       */
+/*   Updated: 2023/10/01 21:19:36 by dasalaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,7 @@
 
 static void	check_type_input(char format, va_list args, int *counter_len)
 {
-	char	*base_low;
-	char	*base_upper;
 
-	base_low = "123456789ABCDEF";
-	base_upper = "123456789abcdef";
 	if (format == 'c')
 		ft_putchar_n(va_arg(args, int), counter_len);
 	else if (format == 's')
@@ -35,9 +31,9 @@ static void	check_type_input(char format, va_list args, int *counter_len)
 	else if ((format == 'x') || (format == 'X'))
 	{
 		if (format == 'x')
-			ft_puthexa_nbr(va_arg(args, unsigned long), counter_len, base_low);
+			ft_puthexa_nbr(va_arg(args, int), counter_len, "0123456789abcdef");
 		else
-			ft_puthexa_nbr(va_arg(args, int), counter_len, base_upper);
+			ft_puthexa_nbr(va_arg(args, int), counter_len, "0123456789ABCDEF");
 	}
 	else if (format == '%')
 		ft_putchar_n('%', counter_len);
